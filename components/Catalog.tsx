@@ -159,7 +159,7 @@ export default function Catalog({ books, authors, publishers, categories, initia
       <section className="hero">
         <h1>أي كتاب تبحث عنه؟</h1>
         <p>
-          فهرس {books.length} {booksWord(books.length)} في مكتبة المنارة. ابحث بالاسم أو ضيّق النتائج بالتصنيف والكاتب
+          فهرس {books.length} {booksWord(books.length)} في مكتبة دار الرموز العربية. ابحث بالاسم أو ضيّق النتائج بالتصنيف والكاتب
           وسنة النشر، ثم افتح الكتاب لتعرف بياناته كاملة.
         </p>
         <form className="search" role="search" onSubmit={(e) => e.preventDefault()}>
@@ -272,7 +272,7 @@ export default function Catalog({ books, authors, publishers, categories, initia
           ) : books.length === 0 ? (
             <div className="empty">
               <h3>الفهرس فارغ حاليًا</h3>
-              <p>لم تُضف أي كتب بعد. سجّل الدخول إلى لوحة التحكم لإضافة أول كتاب.</p>
+              <p>لم تُضف أي كتب بعد. تابعنا قريبًا لتصفّح مجموعتنا.</p>
             </div>
           ) : (
             <div className="empty">

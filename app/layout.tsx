@@ -7,8 +7,8 @@ const book = Amiri({ weight: ["400", "700"], subsets: ["arabic"], variable: "--f
 const ui = IBM_Plex_Sans_Arabic({ weight: ["400", "500", "600", "700"], subsets: ["arabic"], variable: "--font-ui", display: "swap" });
 
 export const metadata: Metadata = {
-  title: { default: "مكتبة المنارة", template: "%s — مكتبة المنارة" },
-  description: "الفهرس الإلكتروني لمكتبة المنارة: ابحث عن الكتب بالعنوان أو الكاتب أو دار النشر.",
+  title: { default: "دار الرموز العربية", template: "%s — دار الرموز العربية" },
+  description: "الفهرس الإلكتروني لدار الرموز العربية، مكتبة ورواق ثقافي: ابحث عن الكتب بالعنوان أو الكاتب أو دار النشر.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
