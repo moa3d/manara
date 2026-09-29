@@ -1,35 +1,35 @@
 :root{
-  --paper:#ECEFEA; --surface:#FAFBF8; --sunk:#E2E7E1;
-  --ink:#16241F; --ink-2:#4A5A53; --ink-3:#6F7E77;
-  --line:#D3DAD2; --line-2:#BFC8BE;
-  --accent:#1F5C4A; --accent-hover:#174A3B; --accent-ink:#FFFFFF; --accent-soft:#D8E8E0;
-  --brass:#8C6414;
+  --paper:#EEF1F6; --surface:#FBFCFE; --sunk:#E2E7F0;
+  --ink:#121C33; --ink-2:#434E68; --ink-3:#69738C;
+  --line:#D3D9E4; --line-2:#BEC6D5;
+  --accent:#1C3578; --accent-hover:#142862; --accent-ink:#FFFFFF; --accent-soft:#DCE3F3;
+  --brass:#3D5FB0;
   --danger:#A8261D; --danger-soft:#F6DEDB; --danger-ink:#FFFFFF;
-  --index:#FFFEF7; --index-rule:#CFDFE8; --index-red:#B4413B;
-  --shadow:0 1px 2px rgba(22,36,31,.08),0 6px 18px -8px rgba(22,36,31,.18);
+  --index:#FDFDFF; --index-rule:#D6DEEE; --index-red:#1C3578;
+  --shadow:0 1px 2px rgba(18,28,51,.08),0 6px 18px -8px rgba(18,28,51,.18);
   --ui:var(--font-ui),"IBM Plex Sans Arabic",system-ui,"Segoe UI",Tahoma,sans-serif;
   --book:var(--font-book),"Amiri","Traditional Arabic","Times New Roman",serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   color-scheme:dark;
-  --paper:#101816; --surface:#172220; --sunk:#0C1311;
-  --ink:#E4ECE7; --ink-2:#A3B3AC; --ink-3:#7F8F88;
-  --line:#26332F; --line-2:#34443F;
-  --accent:#6BC0A0; --accent-hover:#86D2B5; --accent-ink:#0B1512; --accent-soft:#1D3530;
-  --brass:#D6AA52;
+  --paper:#0D1322; --surface:#151D31; --sunk:#0A0F1B;
+  --ink:#E6EBF5; --ink-2:#A6B0C6; --ink-3:#808BA3;
+  --line:#243049; --line-2:#323F5C;
+  --accent:#8EA8EC; --accent-hover:#A9BEF3; --accent-ink:#0A1024; --accent-soft:#1C2A4D;
+  --brass:#7F9BE4;
   --danger:#F08A80; --danger-soft:#3A1E1B; --danger-ink:#1A0B09;
-  --index:#1C2624; --index-rule:#2A3C46; --index-red:#D0665E;
+  --index:#18223A; --index-rule:#2A3858; --index-red:#8EA8EC;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 22px -10px rgba(0,0,0,.6);
 }}
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --paper:#101816; --surface:#172220; --sunk:#0C1311;
-  --ink:#E4ECE7; --ink-2:#A3B3AC; --ink-3:#7F8F88;
-  --line:#26332F; --line-2:#34443F;
-  --accent:#6BC0A0; --accent-hover:#86D2B5; --accent-ink:#0B1512; --accent-soft:#1D3530;
-  --brass:#D6AA52;
+  --paper:#0D1322; --surface:#151D31; --sunk:#0A0F1B;
+  --ink:#E6EBF5; --ink-2:#A6B0C6; --ink-3:#808BA3;
+  --line:#243049; --line-2:#323F5C;
+  --accent:#8EA8EC; --accent-hover:#A9BEF3; --accent-ink:#0A1024; --accent-soft:#1C2A4D;
+  --brass:#7F9BE4;
   --danger:#F08A80; --danger-soft:#3A1E1B; --danger-ink:#1A0B09;
-  --index:#1C2624; --index-rule:#2A3C46; --index-red:#D0665E;
+  --index:#18223A; --index-rule:#2A3858; --index-red:#8EA8EC;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 22px -10px rgba(0,0,0,.6);
 }
 *{box-sizing:border-box}
@@ -49,8 +49,8 @@ h1,h2,h3{text-wrap:balance;margin:0;line-height:1.3}
 /* header */
 .top{display:flex;align-items:center;gap:20px;padding-block:18px;border-bottom:1px solid var(--line);flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;background:none;border:0;padding:0;color:var(--ink)}
-.brand svg{width:34px;height:34px;flex:none}
-.brand b{font-family:var(--book);font-size:24px;font-weight:700;line-height:1}
+.brand img{width:48px;height:48px;flex:none;border-radius:50%;box-shadow:0 0 0 1px var(--line)}
+.brand b{font-family:var(--book);font-size:24px;font-weight:700;line-height:1;color:var(--accent)}
 .brand small{display:block;font-size:12px;color:var(--ink-3);font-weight:400;margin-top:3px}
 .nav{display:flex;gap:4px;margin-inline-start:auto;flex-wrap:wrap}
 .nav a{background:none;border:0;padding:8px 14px;border-radius:999px;color:var(--ink-2);font-weight:500;min-height:40px}
@@ -142,7 +142,7 @@ textarea.input{min-height:110px;resize:vertical;line-height:1.7}
 .card .t{font-family:var(--book);font-weight:700;font-size:18px;line-height:1.35}
 .card .a{font-size:13.5px;color:var(--ink-2);margin-top:-6px}
 .card .m{display:flex;justify-content:space-between;gap:8px;font-size:12.5px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:6px}
-mark{background:color-mix(in srgb,var(--brass) 28%,transparent);color:inherit;border-radius:2px;padding:0 1px}
+mark{background:color-mix(in srgb,var(--brass) 24%,transparent);color:inherit;border-radius:2px;padding:0 1px}
 
 /* generated cloth covers */
 .cover{position:relative;aspect-ratio:2/3;max-width:100%;border-radius:8px 3px 3px 8px;overflow:hidden;background:var(--c);color:#F6F0DF;box-shadow:0 8px 18px -10px rgba(0,0,0,.5);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;justify-content:space-between;padding:14% 12% 10%;isolation:isolate}
